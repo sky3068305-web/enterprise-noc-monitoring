@@ -18,3 +18,4 @@
 ## 🚀 專案效益
 1. 實現跨國多節點即時流量與錯誤監控，將故障發現時間 (MTTD) 縮短 50%。
 2. 整合主動式告警機制，維持系統 99.9% 以上高可用性 (Availability)。
+<img width="1901" height="889" alt="image" src="https://github.com/user-attachments/assets/9fc43c56-33b5-42d1-8a44-4cebf57dc5db" />
