@@ -1,1 +1,16 @@
+# LibreNMS SNMP Agent Configuration Example
+# 適用於 Linux / ESXi / 系統伺服器節點監控
 
+comstrum sec.name default public
+
+# 監控社群字串 (Community String) 與權限設定
+rocommunity public 127.0.0.1
+rocommunity my_private_community 192.168.1.0/24
+
+# 系統基本識別資訊 (去識別化範例)
+syslocation Taipei_HQ_DataCenter
+syscontact IT_Admin <admin@example.com>
+
+# 系統資源與效能監控權限
+view all included .1 80
+access MyROGroup "" any noauth exact all none none
