@@ -13,7 +13,8 @@
 - **自動化腳本:** Python (專案自動化維運與 API 整合)
 
 ## 📐 系統架構與展示
-(在此貼上你的 LibreNMS 戰情室截圖或架構圖)
+<img width="1905" height="900" alt="image" src="https://github.com/user-attachments/assets/ea923449-278b-4dcc-964a-18b475a401c0" />
+
 
 ## 🚀 專案效益
 1. 實現跨國多節點即時流量與錯誤監控，將故障發現時間 (MTTD) 縮短 50%。
