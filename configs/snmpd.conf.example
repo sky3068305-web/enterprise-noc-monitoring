@@ -1,16 +1,18 @@
-# LibreNMS SNMP Agent Configuration Example
-# 適用於 Linux / ESXi / 系統伺服器節點監控
+# ==========================================================
+# LibreNMS SNMP Agent Configuration (Sanitized Example)
+# 用途：跨國 NOC 戰情室 Linux / ESXi / 系統節點監控範例設定檔
+# 注意：敏感 IP 與 Community 名稱皆已做去識別化 (Sanitized) 處理
+# ==========================================================
 
-comstrum sec.name default public
+# 1. 監控權限與社群字串 (Community String 替換為虛擬範例)
+# 僅允許 NOC 監控伺服器網段讀取 SNMP 數據
+rocommunity YOUR_READONLY_COMMUNITY_NAME  10.X.X.X/24
+rocommunity YOUR_READONLY_COMMUNITY_NAME  172.X.X.X/24
 
-# 監控社群字串 (Community String) 與權限設定
-rocommunity public 127.0.0.1
-rocommunity my_private_community 192.168.1.0/24
+# 2. 系統識別與維運聯絡資訊 (去識別化)
+syslocation HQ_DataCenter_ServerRoom
+syscontact IT_NOC_Team <noc-admin@company-example.com>
 
-# 系統基本識別資訊 (去識別化範例)
-syslocation Taipei_HQ_DataCenter
-syscontact IT_Admin <admin@example.com>
-
-# 系統資源與效能監控權限
-view all included .1 80
-access MyROGroup "" any noauth exact all none none
+# 3. 系統資源存取範圍配置 (System View)
+view    systemview    included   .1.3.6.1.2.1.1
+view    systemview    included   .1.3.6.1.2.1.25.1.1
